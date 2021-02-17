@@ -1,11 +1,11 @@
 use serde::Serialize;
 
-use nu_source::{Tag, Text};
+use nu_source::Tag;
 use nu_stream::InputStream;
 
 use nu_engine::run_block;
+use nu_engine::whole_stream_command;
 use nu_engine::EvaluationContext;
-use nu_engine::{whole_stream_command, Command};
 use nu_errors::ShellError;
 
 use nu_parser::ParserScope;
