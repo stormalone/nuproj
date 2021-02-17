@@ -46,8 +46,6 @@ macro_rules! trace_out_stream {
     }};
 }
 
-
-
 //pub(crate) use crate::command::RunnableContext;
 pub(crate) use async_trait::async_trait;
 //pub(crate) use bigdecimal::BigDecimal;
@@ -58,16 +56,16 @@ pub(crate) use futures::{Stream, StreamExt};
 //pub(crate) use nu_data::value;
 //pub(crate) use nu_engine::EvaluationContext;
 pub(crate) use nu_engine::Example;
-pub(crate) use nu_engine::Host;
+//pub(crate) use nu_engine::Host;
 //pub(crate) use nu_engine::RawCommandArgs;
-pub(crate) use nu_engine::ShellManager;
+//pub(crate) use nu_engine::ShellManager;
 
-pub(crate) use nu_engine::{CommandArgs, Scope};
+pub(crate) use nu_engine::CommandArgs;
 //pub(crate) use nu_parser::ParserScope;
 //pub(crate) use nu_protocol::{out, row};
 pub(crate) use nu_source::{SpannedItem, Tag};
 //pub(crate) use nu_stream::ToInputStream;
-pub(crate) use nu_stream::{InputStream, OutputStream};
+pub(crate) use nu_stream::OutputStream;
 //pub(crate) use nu_value_ext::ValueExt;
 //pub(crate) use num_bigint::BigInt;
 /*
@@ -79,10 +77,8 @@ pub(crate) use std::future::Future;
 
 */
 
-pub(crate) use std::sync::Arc;
+//pub(crate) use std::sync::Arc;
 pub(crate) use serde::Deserialize;
-
-
 
 // Do not remove the following lines as this is
 // the original set of stuff in the prelude from nushell
