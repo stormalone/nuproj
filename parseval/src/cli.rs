@@ -2,13 +2,12 @@ use nu_engine::run_block;
 use nu_engine::EvaluationContext;
 
 pub async fn run_nu(line: String) -> String {
-    panic_hook::set_once();
 
     let context = create_default_context(true);
     match context {
         Ok(mut ctx) => {
             // print the command to help debug unhandled errors
-            log!("processing line {}", &line);
+            println!("processing line {}", &line);
             ctx.add_commands(vec![
                 whole_stream_command(random_dice::SubCommand),
                 whole_stream_command(ls::Ls),

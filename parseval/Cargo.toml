@@ -5,3 +5,4 @@ authors = ["Michael Angerman <stormasm@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+nu-engine = {git = "https://github.com/nushell/nushell.git", branch = "main", default-features = false}
