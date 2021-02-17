@@ -8,6 +8,8 @@ use nu_engine::EvaluationContext;
 use nu_engine::{whole_stream_command, Command};
 use nu_errors::ShellError;
 
+use nu_parser::ParserScope;
+
 use crate::default_context::create_default_context;
 use crate::echo;
 
