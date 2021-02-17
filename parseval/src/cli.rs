@@ -1,19 +1,30 @@
+use serde::Serialize;
+
+use nu_source::{Tag, Text};
+use nu_stream::InputStream;
+
 use nu_engine::run_block;
 use nu_engine::EvaluationContext;
+use nu_engine::{whole_stream_command, Command};
+use nu_errors::ShellError;
+
+use crate::default_context::create_default_context;
+use crate::echo;
+
+#[derive(Serialize)]
+enum OkError {
+    Ok(String),
+    Error(ShellError),
+    InternalError(String),
+}
 
 pub async fn run_nu(line: String) -> String {
-
     let context = create_default_context(true);
     match context {
         Ok(mut ctx) => {
             // print the command to help debug unhandled errors
             println!("processing line {}", &line);
-            ctx.add_commands(vec![
-                whole_stream_command(random_dice::SubCommand),
-                whole_stream_command(ls::Ls),
-                whole_stream_command(open::Open),
-                whole_stream_command(sys::Sys),
-            ]);
+            ctx.add_commands(vec![whole_stream_command(echo::Echo)]);
             match parse_and_eval(&line, &mut ctx).await {
                 Ok(val) => match serde_json::to_string(&OkError::Ok(val)) {
                     Ok(output) => output,
