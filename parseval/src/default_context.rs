@@ -5,7 +5,7 @@ use std::error::Error;
 
 use crate::echo::Echo;
 
-pub fn create_default_context(interactive: bool) -> Result<EvaluationContext, Box<dyn Error>> {
+pub fn create_default_context() -> Result<EvaluationContext, Box<dyn Error>> {
     let context = basic_evaluation_context()?;
     context.add_commands(vec![whole_stream_command(Echo)]);
 

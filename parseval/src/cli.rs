@@ -21,7 +21,7 @@ enum OkError {
 }
 
 pub async fn run_nu(line: String) -> String {
-    let context = create_default_context(true);
+    let context = create_default_context();
     match context {
         Ok(mut ctx) => {
             // print the command to help debug unhandled errors
