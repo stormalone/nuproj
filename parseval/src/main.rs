@@ -7,6 +7,5 @@ pub async fn check() {
 
 fn main() {
     println!("Hello, world!");
-
     futures::executor::block_on(check());
 }
