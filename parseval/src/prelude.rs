@@ -1,3 +1,11 @@
+pub(crate) use async_trait::async_trait;
+pub(crate) use futures::{Stream, StreamExt};
+pub(crate) use nu_engine::CommandArgs;
+pub(crate) use nu_engine::Example;
+pub(crate) use nu_source::{SpannedItem, Tag};
+pub(crate) use nu_stream::OutputStream;
+pub(crate) use serde::Deserialize;
+
 #[macro_export]
 macro_rules! return_err {
     ($expr:expr) => {
@@ -45,14 +53,6 @@ macro_rules! trace_out_stream {
         }
     }};
 }
-
-pub(crate) use async_trait::async_trait;
-pub(crate) use futures::{Stream, StreamExt};
-pub(crate) use nu_engine::CommandArgs;
-pub(crate) use nu_engine::Example;
-pub(crate) use nu_source::{SpannedItem, Tag};
-pub(crate) use nu_stream::OutputStream;
-pub(crate) use serde::Deserialize;
 
 #[allow(clippy::wrong_self_convention)]
 pub trait FromInputStream {
