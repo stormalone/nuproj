@@ -19,11 +19,11 @@ serde_json = "1.0.61"
 
 ### nushell crates
 
-nu-data = {git = "https://github.com/stormasm/nume.git", branch = "x0.27.1"}
-nu-engine = {git = "https://github.com/stormasm/nume.git", branch = "x0.27.1"}
-nu-errors = {git = "https://github.com/stormasm/nume.git", branch = "x0.27.1"}
-nu-parser = {git = "https://github.com/stormasm/nume.git", branch = "x0.27.1"}
-nu-protocol = {git = "https://github.com/stormasm/nume.git", branch = "x0.27.1"}
-nu-source = {git = "https://github.com/stormasm/nume.git", branch = "x0.27.1"}
-nu-stream = {git = "https://github.com/stormasm/nume.git", branch = "x0.27.1"}
-nu-value-ext = {git = "https://github.com/stormasm/nume.git", branch = "x0.27.1"}
+nu-data = {git = "https://github.com/stormasm/nume.git", branch = "x0.32.1"}
+nu-engine = {git = "https://github.com/stormasm/nume.git", branch = "x0.32.1"}
+nu-errors = {git = "https://github.com/stormasm/nume.git", branch = "x0.32.1"}
+nu-parser = {git = "https://github.com/stormasm/nume.git", branch = "x0.32.1"}
+nu-protocol = {git = "https://github.com/stormasm/nume.git", branch = "x0.32.1"}
+nu-source = {git = "https://github.com/stormasm/nume.git", branch = "x0.32.1"}
+nu-stream = {git = "https://github.com/stormasm/nume.git", branch = "x0.32.1"}
+nu-value-ext = {git = "https://github.com/stormasm/nume.git", branch = "x0.32.1"}
