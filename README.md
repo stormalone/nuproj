@@ -20,3 +20,7 @@ debugging information.
 let (classified_block, err) = nu_parser::parse(&line, 0, &ctx.scope);
 let result = run_block(&classified_block, ctx, input_stream).await;
 ```
+
+##### branches
+
+* x0.32.1
